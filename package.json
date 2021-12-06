@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "prettier": "2.5.0"
+  },
+  "dependencies": {
+    "cosmiconfig": "^7.0.1",
+    "isotope-layout": "^3.0.6"
+  }
+}
