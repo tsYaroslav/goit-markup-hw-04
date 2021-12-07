@@ -255,7 +255,7 @@ ul {
 .main-section {
   position: relative;
   width: 100%;
-  padding: 0;
+  padding: 200px 0;
   background: var(--icon-grey-2) url(../images/main-bg-overlay.jpg);
   background-size: cover;
 }
