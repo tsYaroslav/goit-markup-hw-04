@@ -606,7 +606,7 @@ ul {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-item:last-child {
+.project-item:nth-child(3n) {
   margin-right: 0;
 }
 
