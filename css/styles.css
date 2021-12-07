@@ -255,7 +255,7 @@ ul {
 .main-section {
   position: relative;
   width: 100%;
-  padding: 200px 0;
+  padding: 0;
   background: var(--icon-grey-2) url(../images/main-bg-overlay.jpg);
   background-size: cover;
 }
@@ -265,7 +265,7 @@ ul {
   height: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 195px 20px;
+  padding: 200px 15px;
   background: var(--icon-grey-2) url(../images/main-bg.jpg);
   background-size: cover;
 }
@@ -315,6 +315,7 @@ ul {
 
 .benefit .icon {
   margin-bottom: 20px;
+  width: 270px;
 }
 
 .benefit:last-child {
@@ -460,9 +461,14 @@ ul {
 }
 
 .clients-item {
-  margin: 15px;
+  margin-right: 30px;
+  margin-bottom: 30px;
   padding: 18px 64px;
   border: 1px solid var(--icon-grey);
+}
+
+.clients-item:last-child {
+  margin-right: 0;
 }
 
 .clients-item:hover {
