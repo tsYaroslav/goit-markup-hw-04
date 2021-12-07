@@ -149,9 +149,9 @@ ul {
 }
 
 .container {
-  width: 100%;
-  max-width: 1170px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .main-h1 {
@@ -178,21 +178,20 @@ ul {
 
 /* Header */
 .header {
+  padding: 24px 0 25px;
   background: var(--primary-white);
   border: 1px solid var(--tertiary-grey);
 }
 
 .header-inner {
-  padding: 24px 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 .logo,
 .logo:hover,
 .logo:focus {
-  margin-right: 70px;
+  margin-right: 95px;
   color: var(--primary-black);
 }
 
@@ -210,7 +209,6 @@ ul {
   justify-content: flex-start;
   list-style-type: none;
   padding: 0;
-  margin-top: 6px;
 }
 
 .contacts-list {
@@ -220,7 +218,12 @@ ul {
 .nav-list li a,
 .contacts-list li a {
   padding: 5px 0px;
-  margin: 0 25px;
+  margin-right: 50px;
+}
+
+.nav-list li:last-child a,
+.contacts-list li:last-child a {
+  margin-right: 0;
 }
 
 .contacts-list li a {
@@ -268,8 +271,7 @@ ul {
 }
 
 .cta-block {
-  width: 100%;
-  max-width: 600px;
+  max-width: 696px;
   margin: 0 auto;
   text-align: center;
 }
@@ -294,6 +296,10 @@ ul {
 }
 
 /* benefit section */
+.benefits {
+  padding-bottom: 0;
+}
+
 .benefit-list {
   display: flex;
   flex-direction: row;
@@ -311,7 +317,7 @@ ul {
   margin-bottom: 20px;
 }
 
-.benefit:nth-child(4n) {
+.benefit:last-child {
   margin-right: 0;
 }
 
@@ -347,7 +353,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.expertise-item:nth-child(3n) {
+.expertise-item:last-child {
   margin-right: 0;
 }
 
@@ -366,7 +372,7 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-mate:nth-child(4n) {
+.team-mate:last-child {
   margin-right: 0;
 }
 
@@ -509,7 +515,10 @@ ul {
 
 .footer-leftside a {
   width: 100%;
-  padding: 4px 5px;
+}
+
+.footer-leftside ul li {
+  margin-bottom: 5px;
 }
 
 .footer a:hover {
@@ -554,19 +563,22 @@ ul {
 .portfolio-head {
   margin-bottom: 30px;
   text-align: center;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .portfolio-head li {
   text-align: center;
+  margin-right: 8px;
+}
+
+.portfolio-head li:last-child {
+  margin-right: 0;
 }
 
 .filter-btn {
   font: 500 16px/1.62 Roboto, 'Helvetica Neue', sans-serif;
   padding: 8px 22px;
-  margin: 4px;
 }
 
 .portfolio-body {
@@ -588,7 +600,7 @@ ul {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-item:nth-child(3n) {
+.project-item:last-child {
   margin-right: 0;
 }
 
@@ -599,6 +611,7 @@ ul {
 }
 
 .project-name {
+  margin-bottom: 4px;
   color: var(--primary-black);
   font: 700 18px/2 Roboto, 'Helvetica Neue', sans-serif;
 }
