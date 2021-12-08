@@ -95,7 +95,8 @@ button {
 }
 
 button.active,
-button:hover {
+button:hover,
+button:not(.main-cta):focus {
   color: var(--primary-white);
   background: var(--primary-blue);
   transition: all 0.15s;
