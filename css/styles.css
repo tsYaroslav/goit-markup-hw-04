@@ -70,7 +70,8 @@ a {
 }
 
 a:hover,
-a.active {
+a.active,
+a:focus {
   color: var(--primary-blue);
 }
 
@@ -100,7 +101,6 @@ button:not(.main-cta):focus {
   color: var(--primary-white);
   background: var(--primary-blue);
   transition: all 0.15s;
-  outline: none;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -160,7 +160,7 @@ ul {
 .header {
   padding: 24px 0 25px;
   background: var(--primary-white);
-  border: 1px solid var(--tertiary-grey);
+  border-bottom: 1px solid var(--tertiary-grey);
 }
 
 .header-inner {
@@ -207,7 +207,8 @@ ul {
   fill: var(--text-grey);
 }
 
-.contacts-list .nav-list-item:hover svg {
+.nav-list-item:hover svg,
+.nav-list-item a:focus svg {
   fill: var(--primary-blue);
   transition: all 0.15s;
 }
@@ -215,11 +216,15 @@ ul {
 .contacts-list .icon-envelope {
   width: 16px;
   height: 12px;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
 }
 
 .contacts-list .icon-phone {
   width: 10px;
   height: 16px;
+  margin-right: 5px;
   position: relative;
   top: 3px;
 }
@@ -279,7 +284,7 @@ ul {
 }
 
 .benefit .icon {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 270px;
 }
 
@@ -353,6 +358,7 @@ ul {
 }
 
 .mate-position {
+  margin-bottom: 16px;
   font: 400 16px/1.18 Roboto, 'Helvetica Neue', sans-serif;
 }
 
@@ -365,6 +371,7 @@ ul {
   display: flex;
   width: 44px;
   height: 44px;
+  margin-right: 10px;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -373,6 +380,10 @@ ul {
 
 .soc-link {
   transition: 0.15s;
+}
+
+.soc-link:last-child {
+  margin-right: 0;
 }
 
 .soc-link:hover {
@@ -385,6 +396,14 @@ ul {
 }
 
 .soc-link:hover svg {
+  fill: var(--primary-white);
+}
+
+.soc-link:focus {
+  background: var(--primary-blue);
+  border-radius: 50%;
+}
+.soc-link:focus svg {
   fill: var(--primary-white);
 }
 
@@ -411,16 +430,11 @@ ul {
 /* clients */
 .clients-list {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .clients-item {
   margin-right: 30px;
-  margin-bottom: 30px;
-  padding: 18px 64px;
   border: 1px solid var(--icon-grey);
 }
 
@@ -432,13 +446,19 @@ ul {
   border: 1px solid var(--primary-blue);
 }
 
+.clients-item a {
+  display: block;
+  padding: 18px 64px;
+}
+
 .clients-item svg {
   width: 41px;
   height: 46px;
   fill: var(--icon-grey);
 }
 
-.clients-item:hover svg {
+.clients-item:hover svg,
+.clients-item a:focus svg {
   fill: var(--primary-blue);
 }
 
@@ -467,17 +487,21 @@ ul {
   text-decoration: none;
 }
 
+.footer a:focus {
+  color: var(--primary-white);
+}
+
 .footer-leftside {
   flex-direction: column;
   margin-right: 70px;
 }
 
-.footer-leftside a {
-  width: 100%;
+.contacts-item {
+  margin-bottom: 5px;
 }
 
-.footer-leftside ul li {
-  margin-bottom: 5px;
+.contacts-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer a:hover {
@@ -485,29 +509,23 @@ ul {
   transition: 0.15s;
 }
 
-.footer-social {
-  flex-direction: column;
-}
-
-.social-block {
+.social-groups {
   display: flex;
-  flex-direction: row;
 }
 
-.social-block .soc-link {
-  margin-right: 10px;
+.social-groups .soc-link {
   background: var(--icon-grey-2);
 }
 
-.social-block .soc-link:hover {
+.social-groups .soc-link:hover {
   background: var(--primary-blue);
 }
 
-.social-block .soc-link:focus {
+.social-groups .soc-link:focus {
   background: var(--primary-blue);
   border-radius: 50%;
 }
-.social-block .soc-link:focus svg {
+.social-groups .soc-link:focus svg {
   fill: var(--primary-white);
 }
 
@@ -544,14 +562,11 @@ ul {
   margin: 0 -15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .project-item {
-  width: 100%;
-  max-width: 370px;
+  width: 370px;
   margin: 15px;
-  border: 1px solid var(--secondary-grey);
   background: var(--primary-white);
 }
 
@@ -572,7 +587,7 @@ ul {
 
 .project-info {
   padding: 24px;
-  border: 1px solid var(--primary-grey);
+  border: 1px solid var(--secondary-grey);
   border-top: none;
 }
 .project-name {
@@ -582,5 +597,6 @@ ul {
 }
 
 .project-description {
+  color: var(--text-grey);
   font: 400 16px/1.87 Roboto, 'Helvetica Neue', sans-serif;
 }
