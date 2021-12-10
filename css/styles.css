@@ -367,43 +367,46 @@ ul {
   justify-content: space-between;
 }
 
-.soc-link {
-  display: flex;
+.social-item {
+  margin-right: 10px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
+}
+
+.social-link {
   width: 44px;
   height: 44px;
-  margin-right: 10px;
+  display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
 }
 
-.soc-link {
+.social-link {
   transition: 0.15s;
 }
 
-.soc-link:last-child {
-  margin-right: 0;
-}
-
-.soc-link:hover {
+.social-link:hover {
   background: var(--primary-blue);
 }
 
-.soc-link svg {
+.social-link svg {
   fill: var(--icon-grey);
   transition: 0.15s;
 }
 
-.soc-link:hover svg {
+.social-link:hover svg {
   fill: var(--primary-white);
 }
 
-.soc-link:focus {
+.social-link:focus {
   background: var(--primary-blue);
   border-radius: 50%;
 }
-.soc-link:focus svg {
+.social-link:focus svg {
   fill: var(--primary-white);
 }
 
@@ -513,19 +516,19 @@ ul {
   display: flex;
 }
 
-.social-groups .soc-link {
+.social-groups .social-link {
   background: var(--icon-grey-2);
 }
 
-.social-groups .soc-link:hover {
+.social-groups .social-link:hover {
   background: var(--primary-blue);
 }
 
-.social-groups .soc-link:focus {
+.social-groups .social-link:focus {
   background: var(--primary-blue);
   border-radius: 50%;
 }
-.social-groups .soc-link:focus svg {
+.social-groups .social-link:focus svg {
   fill: var(--primary-white);
 }
 
