@@ -228,7 +228,7 @@ ul {
   max-width: 1600px;
   margin: 0 auto;
   padding: 200px 15px;
-  background: var(--icon-grey-2) url(../images/main-bg.jpg) center no-repeat;
+  background: url(../images/main-bg.jpg) center no-repeat;
   background-size: cover;
 }
 
