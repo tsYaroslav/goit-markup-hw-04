@@ -16,12 +16,6 @@
   --icon-grey: #afb1b8;
   --icon-grey-2: #43444d;
 }
-/*  Box sizing rules  */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 /*  Remove default margin  */
 body,
@@ -199,11 +193,17 @@ ul {
   margin-right: 50px;
 }
 
+.nav-list-link {
+  display: flex;
+  align-items: center;
+}
+
 .nav-list-item:last-child {
   margin-right: 0;
 }
 
 .contacts-list svg {
+  margin-right: 10px;
   fill: var(--text-grey);
 }
 
@@ -216,34 +216,19 @@ ul {
 .contacts-list .icon-envelope {
   width: 16px;
   height: 12px;
-  margin-right: 5px;
-  position: relative;
-  top: 1px;
 }
 
 .contacts-list .icon-phone {
   width: 10px;
   height: 16px;
-  margin-right: 5px;
-  position: relative;
-  top: 3px;
 }
 
 /* Main cta section*/
 .main-section {
-  position: relative;
-  width: 100%;
-  padding: 0;
-  background: var(--icon-grey-2);
-}
-
-.main-section-bg {
-  width: 100%;
-  height: 100%;
   max-width: 1600px;
   margin: 0 auto;
   padding: 200px 15px;
-  background: var(--icon-grey-2) url(../images/main-bg.jpg);
+  background: var(--icon-grey-2) url(../images/main-bg.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -275,18 +260,25 @@ ul {
 }
 
 .benefit {
-  margin: 0;
-  box-sizing: border-box;
   margin-right: 30px;
-}
-
-.benefit .icon {
-  margin-bottom: 30px;
-  width: 270px;
 }
 
 .benefit:last-child {
   margin-right: 0;
+}
+
+.benefit-icon {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-bg);
+}
+
+.benefit .icon {
+  width: 70px;
+  height: 70px;
 }
 
 .benefit-caption {
@@ -343,7 +335,6 @@ ul {
 
 .mate-img {
   width: 270px;
-  width: 100%;
   height: auto;
   margin-bottom: 30px;
 }
@@ -430,30 +421,32 @@ ul {
 /* clients */
 .clients-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .clients-item {
   margin-right: 30px;
-  border: 1px solid var(--icon-grey);
 }
 
 .clients-item:last-child {
   margin-right: 0;
 }
 
-.clients-item:hover {
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icon-grey);
+}
+
+.clients-link:hover {
   border: 1px solid var(--primary-blue);
 }
 
-.clients-item a {
-  display: block;
-  padding: 18px 64px;
-}
-
 .clients-item svg {
-  width: 41px;
-  height: 46px;
+  width: 106px;
+  height: 60px;
   fill: var(--icon-grey);
 }
 
@@ -465,15 +458,12 @@ ul {
 /* footer */
 .footer {
   padding: 60px 0;
-  width: 100%;
   background: var(--secondary-black);
 }
 
 .footer-inner {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
+  align-items: baseline;
 }
 
 .footer .logo {
@@ -525,6 +515,7 @@ ul {
   background: var(--primary-blue);
   border-radius: 50%;
 }
+.social-groups .social-link svg,
 .social-groups .social-link:focus svg {
   fill: var(--primary-white);
 }
