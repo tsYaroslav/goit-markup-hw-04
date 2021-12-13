@@ -438,6 +438,7 @@ ul {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--icon-grey);
+  border-radius: 4px;
 }
 
 .clients-link:hover {
@@ -565,7 +566,7 @@ ul {
   display: block;
 }
 
-.project-item:hover,
+.project-item a:hover,
 .project-item a:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
